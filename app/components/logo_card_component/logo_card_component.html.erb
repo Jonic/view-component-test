@@ -1,0 +1,67 @@
+<%= content %>
+<%= content_tag(@element, class: class_with_type('c-logo-card')) do %>
+  <% if header %>
+    <div class="<%= header.classes %>">
+      <%= header.text %>
+    </div>
+  <% end %>
+
+  <%= content_tag(:div, class: class_with_type('c-logo-card__content')) do %>
+    <%=
+      image_tag(
+        "cards/#{@icon}",
+        alt: '',
+        class: "c-logo-card__icon c-logo-card__icon--#{@type}"
+      )
+    %>
+
+    <h3 class="c-logo-card__title">
+      <%=
+        link_to(
+          @title,
+          @link,
+          aria: {
+            describedby: "c-logo-card__link-desc--#{@label}"
+          },
+          class: class_with_label('c-logo-card__link')
+        )
+      %>
+    </h3>
+
+    <p class="c-logo-card__description">
+      <%= @description %>
+    </p>
+
+    <% if mission_details %>
+      <%=
+        content_tag(
+          :div,
+          class: "c-logo-card__choice--time c-logo-card__choice--#{mission_details.time_scale}"
+        ) do
+      %>
+        <%= render(IconComponent.new(name: mission_details.time_scale)) %>
+        <%= mission_details.duration %>
+      <% end %>
+
+      <div class="c-logo-card__choice--age">
+        <%= render(IconComponent.new(name: 'person')) %>
+        <%= mission_details.age %>
+      </div>
+    <% end %>
+
+    <% if button %>
+      <%=
+        content_tag(
+          :div,
+          class: "c-logo-card__cta",
+          aria: {
+            'hidden': true,
+          },
+          id: "c-logo-card__link-desc--#{@label}"
+        ) do
+      %>
+          <%= button.label %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

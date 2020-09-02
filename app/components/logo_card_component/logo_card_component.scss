@@ -1,0 +1,170 @@
+.c-logo-card {
+  display: flex;
+  flex-basis: 25%;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 0 2.4rem;
+  max-width: 40rem;
+  position: relative;
+  text-align: center;
+  transition: transform 100ms ease-in-out;
+  width: auto;
+}
+
+.c-logo-card:hover {
+  transform: scale(1.05);
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    transform: unset;
+  }
+
+  & .c-logo-card__content {
+    box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.2);
+  }
+  & .c-logo-card__cta {
+    background-color: #001824;
+  }
+}
+
+.c-logo-card__header {
+  background-color: #ffcd34;
+  border-radius: 4rem;
+  margin: auto;
+  padding: 1.2rem 2.4rem;
+  visibility: hidden;
+  transform: translateY(50%);
+  z-index: 100;
+}
+
+.c-logo-card__header--highlight {
+  visibility: visible;
+}
+
+.c-logo-card__content {
+  align-items: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  padding: 4.8rem 3.6rem;
+  position: relative;
+  text-decoration: none;
+  transition: box-shadow 100ms ease-in-out;
+  width: 100%;
+}
+
+.c-logo-card__content:hover {
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.2);
+}
+
+.c-logo-card__content:focus-within {
+  outline: 5px solid #002b3f;
+
+  & .c-logo-card__link {
+    text-decoration: none;
+  }
+}
+
+.c-logo-card__icon {
+  height: 20rem;
+  max-width: 20em;
+  object-fit: contain;
+}
+
+.c-logo-card__title {
+  font-size: 2.88rem;
+  margin: 2.4rem 0;
+  min-height: 2.8em;
+}
+
+.ap-logo-card__title:focus-within ~ .c-logo-card__cta {
+  background-color: #001824;
+  outline-color: #001824;
+}
+
+.c-logo-card__link {
+  font-family: "NotesEsa", "san-serif";
+  font-weight: normal;
+  outline: none;
+  text-decoration: none;
+  width: 100%;
+
+  &::after {
+    bottom: 0;
+    content: " ";
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+.c-logo-card__link:focus {
+  text-decoration: underline;
+}
+
+.c-logo-card__description {
+  flex: 1 0 auto;
+  margin-bottom: 2.4rem;
+  margin-top: 0;
+}
+
+.c-logo-card__cta {
+  background-color: #002b3f;
+  border-width: 0;
+  color: #fff;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  max-width: 50ch;
+  padding: 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 90%;
+}
+
+// Three card layout
+
+.c-logo-card__content--resource {
+  margin-bottom: 0;
+  padding: 2.4rem 3.6rem;
+}
+
+// Mission choice styles
+
+.c-logo-card__choice--time {
+  font-weight: bold;
+  margin-bottom: 2.4rem;
+}
+
+.c-logo-card__choice--age {
+  font-weight: bold;
+  margin-bottom: 2.4rem;
+}
+
+.c-logo-card__link--zero,
+.c-logo-card__link--zero:visited {
+  color: #c60294;
+  font-size: 3.6rem;
+}
+
+.c-logo-card__link--space-lab,
+.c-logo-card__link--space-lab:visited {
+  color: #299c82;
+  font-size: 3.6rem;
+}
+
+// Resource card styles
+
+.c-logo-card__link--zero-resources,
+.c-logo-card__link--space-lab-resources,
+.c-logo-card__link--hardware-resources,
+.c-logo-card__link--zero-resources:visited,
+.c-logo-card__link--space-lab-resources:visited,
+.c-logo-card__link--hardware-resources:visited {
+  color: #002b3f;
+  font-weight: bold;
+}
