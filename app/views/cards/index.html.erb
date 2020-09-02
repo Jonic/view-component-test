@@ -1,3 +1,13 @@
 <%= render(SectionComponent.new) do %>
-  <%= render(CardSliceComponent.new(heading: 'Optional Heading Goes Here')) %>
+  <%= render(CardSliceComponent.new) do %>
+    <%= render(ContainerComponent.new) do %>
+      <%= render(CardContainerComponent.new(modifier: :logo)) do %>
+        <%= render(LogoCardComponent.with_collection(I18n.t(:cards))) do |c| %>
+          <% c.slot(:header, data: c.card[:header]) %>
+          <% c.slot(:mission_details, data: c.card[:mission_details]) %>
+          <% c.slot(:button, data: c.card[:button]) %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
 <% end %>
