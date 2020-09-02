@@ -16,24 +16,28 @@
 
 @font-face {
   font-family: "NotesEsa";
-  src: url("/assets/fonts/notesesareg.eot");
-  src: url("/assets/fonts/notesesareg.eot?#iefix") format("embedded-opentype"),
-    url("/assets/fonts/notesesareg.woff") format("woff"),
-    url("/assets/fonts/notesesareg.ttf") format("truetype"),
-    url("/assets/fonts/notesesareg.svg#notesesaregular") format("svg");
+  src: url("notesesareg.eot");
+  src: url("notesesareg.eot?#iefix") format("embedded-opentype"),
+    url("notesesareg.woff") format("woff"),
+    url("notesesareg.ttf") format("truetype"),
+    url("notesesareg.svg#notesesaregular") format("svg");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "NotesEsa";
-  src: url("/assets/fonts/notesesabol.eot");
-  src: url("/assets/fonts/notesesabol.eot?#iefix") format("embedded-opentype"),
-    url("/assets/fonts/notesesabol.woff") format("woff"),
-    url("/assets/fonts/notesesabol.ttf") format("truetype"),
-    url("/assets/fonts/notesesabol.svg#notesesabold") format("svg");
+  src: url("notesesabol.eot");
+  src: url("notesesabol.eot?#iefix") format("embedded-opentype"),
+    url("notesesabol.woff") format("woff"),
+    url("notesesabol.ttf") format("truetype"),
+    url("notesesabol.svg#notesesabold") format("svg");
   font-weight: 700;
   font-style: bold;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
