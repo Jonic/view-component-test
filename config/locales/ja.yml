@@ -1,0 +1,36 @@
+en:
+  cards:
+    - title: ミッションゼロ
+      label: zero
+      type: mission
+      header:
+        highlight: true
+        text: 初心者に最適
+      icon: mission_zero_logo.svg
+      link: /mission-zero/
+      description: 国際宇宙ステーションにいる宇宙飛行士にメッセージを送ってください！
+      mission_details:
+        time:
+          scale: clock
+          duration: 一時間
+        age: 一四歳未満
+      button:
+        label: ミッションゼロを選択
+        type: primary
+    - title: ミッションスペースラボ
+      label: space-lab
+      type: mission
+      header:
+        highlight: false
+        text: 上級者向け
+      icon: mission_space_lab_logo.svg
+      link: /mission-space-lab/
+      description: 宇宙で科学実験をしよう！
+      mission_details:
+        time:
+          scale: date
+          duration: 六ヶ月
+        age: 一九歳未満
+      button:
+        label: ミッションスペースラボを選択
+        type: primary

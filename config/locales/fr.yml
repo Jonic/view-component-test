@@ -5,32 +5,32 @@ en:
       type: mission
       header:
         highlight: true
-        text: Suitable for beginners
+        text: Convient aux débutants
       icon: mission_zero_logo.svg
       link: /mission-zero/
-      description: Send a message to the astronauts aboard the International Space Station!
+      description: Envoyez un message aux astronautes à bord de la Station spatiale internationale!
       mission_details:
         time:
           scale: clock
-          duration: 1 hour
-        age: Age under 14
+          duration: 1 heure
+        age: Moins de 14 ans
       button:
-        label: Choose Mission Zero
+        label: Choisissez Mission Zero
         type: primary
     - title: MISSION SPACE LAB
       label: space-lab
       type: mission
       header:
         highlight: false
-        text: Suitable for advanced
+        text: Convient aux avancés
       icon: mission_space_lab_logo.svg
       link: /mission-space-lab/
-      description: Conduct a scientific experiment in space!
+      description: Menez une expérience scientifique dans l'espace!
       mission_details:
         time:
           scale: date
-          duration: 6 months
-        age: Age under 19
+          duration: 6 mois
+        age: Moins de 19 ans
       button:
-        label: Choose Mission Space Lab
+        label: Choisissez Mission Space Lab
         type: primary
