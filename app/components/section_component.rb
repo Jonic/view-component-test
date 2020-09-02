@@ -1,2 +1,1 @@
-class SectionComponent < ViewComponent::Base
-end
+class SectionComponent < ViewComponent::Base; end
