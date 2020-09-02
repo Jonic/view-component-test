@@ -1,24 +1,16 @@
-# README
+# View Component Test
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Testing out the [Github's view_component Gem](https://github.com/github/view_component) on a dummy Rails app that implements a tiny portion of one of our sites.
 
-Things you may want to cover:
+There are three locales: `en`, `fr`, and `ja`. The default is `en`.
 
-* Ruby version
+The routes for each are:
 
-* System dependencies
+- `/`
+- `/cards`
 
-* Configuration
+The root implements a non-localised "Hello World" Component. Nothing interesting there.
 
-* Database creation
+The interesting bit is in `app/views/cards/index.html.erb`, which in turn uses several components in the `app/components` directory. That's where all the clever bits are.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I've written a few tests to see what they're like, but haven't taken it too far because I wanted to get the Components working first.
