@@ -1,5 +1,3 @@
 <%= render(SectionComponent.new) do %>
-  <%= render(ContainerComponent.new) do %>
-    Whatevs
-  <% end %>
+  <%= render(CardSliceComponent.new(heading: 'Optional Heading Goes Here')) %>
 <% end %>
