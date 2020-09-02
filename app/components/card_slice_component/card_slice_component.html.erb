@@ -3,7 +3,5 @@
     <h2 class="c-card-slice__heading"><%= @heading %></h2>
   <% end %>
 
-  <%= render(ContainerComponent.new) do %>
-    <%= render(CardContainerComponent.new) %>
-  <% end %>
+  <%= content %>
 </div>
