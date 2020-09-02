@@ -6,13 +6,7 @@
   <% end %>
 
   <%= content_tag(:div, class: class_with_type('c-logo-card__content')) do %>
-    <%=
-      image_tag(
-        "cards/#{@icon}",
-        alt: '',
-        class: "c-logo-card__icon c-logo-card__icon--#{@type}"
-      )
-    %>
+    <%= image_tag("cards/#{@icon}", alt: '', class: "c-logo-card__icon c-logo-card__icon--#{@type}") %>
 
     <h3 class="c-logo-card__title">
       <%=
@@ -32,12 +26,7 @@
     </p>
 
     <% if mission_details %>
-      <%=
-        content_tag(
-          :div,
-          class: "c-logo-card__choice--time c-logo-card__choice--#{mission_details.time_scale}"
-        ) do
-      %>
+      <%= content_tag(:div, class: "c-logo-card__choice--time c-logo-card__choice--#{mission_details.time_scale}") do %>
         <%= render(IconComponent.new(name: mission_details.time_scale)) %>
         <%= mission_details.duration %>
       <% end %>
